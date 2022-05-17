@@ -1,0 +1,22 @@
+{
+  "name": "expressapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "bare": "^0.0.2",
+    "bare-server-node": "github:tomphttp/bare-server-node",
+    "cookie-parser": "~1.4.4",
+    "corrosion": "^1.0.0",
+    "debug": "~2.6.9",
+    "ejs": "^3.0.2",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nord": "^0.2.1",
+    "normalize.css": "^8.0.1"
+  }
+}
