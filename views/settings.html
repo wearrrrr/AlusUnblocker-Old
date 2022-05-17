@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link id="favicon" rel="icon" type="image/png" href="./img/icon.svg" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="./vendor/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./vendor/aos/aos.css" />
+    <link rel="stylesheet" href="./vendor/toastr/toastr.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./vendor/toastr/toastr.min.js"></script>
+    <script src="./toggles.js"></script>
+    <script src="/header.js"></script>
+</head>
+<body>
+<script src="./vendor/aos/aos.js"></script>
+<div class="top-header" data-aos="fade-down" data-aos-duration="1000">
+    <div id="title-background" class="title-background"><a id="nav-toggle" class="mobile-toggle" onclick="openNav()"><i id="nav-icon"class="fa-2x fa-solid fa-bars"></i></a></div>
+</div>
+<div id="sidenav" class="sidenav">
+    <a class="closebtn" onclick="closeNav()">&times;</a>
+    <br>
+    <a href="/" class="mobile-nav-header-item"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="/proxies" class="mobile-nav-header-item"><i class="fa-solid fa-browser"></i> Proxies</a>
+    <a href="/games" class="mobile-nav-header-item"><i class="fa-solid fa-joystick"></i> Games</a>
+    <div class="divider"></div>
+    <a href="/bookmarklets" class="mobile-nav-header-item"><i class="fa-solid fa-bookmark"></i> Bookmarklets</a>
+    <a href="/settings" class="mobile-nav-header-item"><i class="fa-solid fa-gear"></i> Settings</a>
+    <div class="divider"></div>
+    <a href="./credits" class="mobile-nav-header-item"><i class="fa-solid fa-align-left"></i> Credits</a>
+    <a href="./docs.html" class="mobile-nav-header-item"><i class="fa-solid fa-book-bookmark"></i> Docs</a>
+  </div>
+</div>
+<!--BODY CONTENT-->
+<p class="additional-notes-text fade-in">*NOTE* All settings save even after the browser is closed!</p>
+<div class="toggle-setting">
+    <p class="toggle-text fade-in">Enable/Disable Arc Widget</p>
+    <label class="switch">
+        <input id="checkbox" type="checkbox">
+        <span onclick=checked() id="checkbox" class="slider round"></span>
+      </label>
+</div>
+<div class="toggle-setting">
+    <p class="toggle-text fade-in">Hide Footer</p>
+    <label class="switch">
+        <input id="checkboxTwo" type="checkbox">
+        <span onclick=checkedTwo() id="checkbox" class="slider round"></span>
+      </label>
+</div>
+<br>
+<div class="label-setting">
+    <label class="label-text fade-in" class="label-setting">Tab Cloak</label>
+    <input id="tab-cloak" class="settings-btn rounding no-bdr" type="text">
+    <div class="btn-break"></div>
+    <button id="submitButton" class="settings-btn rounding no-bdr" onclick="cloakTab()">Change Tab Name</button>
+</div>
+<br>
+<div class="label-setting">
+    <label class="label-text fade-in" class="label-setting rounding no-bdr">Change Tab Icon</label>
+    <div class="btn-break"></div>
+    <input id="icn-change" class="settings-btn rounding no-bdr" type="text">
+    <div class="btn-break"></div>
+    <button onclick="changeIcon()" class="settings-btn rounding no-bdr" id="submitButton">Change Tab Icon</button>
+</div>
+<br>
+<div class="reset-wrapper">
+    <button class="settings-btn reset rounding no-bdr" onclick="resetCloaks()">ㅤReset Tab and Iconㅤ</button>
+</div>
+<button onclick="bruh()" id="bruh" style="display: none" class="wtfwhy"></button> <!--somebody please PLEASE recommend a better toast library in my discord-->
+<button onclick="bruh()" id="bruh" style="display: none" class="wtfwhy"></button>
+<div class="popular-cloaks">
+<h1 class="popular-cloaks-header fade-in">Popular Cloaks:</h1>
+    <div class="google">
+        <button onclick="googleCloak()" class="settings-btn rounding no-bdr" id="cloak">Google</button>
+    </div>
+    <div class="btn-break-large"></div>
+    <div class="google">
+        <button onclick="googleClassroomCloak()" class="settings-btn rounding no-bdr" id="cloak">Google Classroom</button>
+    </div>
+    <div class="btn-break-large"></div>
+    <div class="google">
+        <button onclick="driveCloak()" class="settings-btn rounding no-bdr" id="cloak">Google Drive</button>
+    </div>
+    <div class="btn-break-large"></div>
+    <div class="google">
+        <button onclick="canvasCloak()" class="settings-btn rounding no-bdr" id="cloak">Canvas</button>
+    </div>
+</div>
+<script src="settings.js"></script>
+<div id="footer">
+    <div class="footerflex">
+        <div class="footerbrand">
+            <h3><a href="/">Alu's Unblocker</a></h3>
+            <p>Made with ❤️ by <a href="#">wearr</a></p>
+        </div>
+        <div class="footerlist">
+            <h3>Services</h3>
+            <ul>
+                <li><a target="_blank" href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet</a></li>
+                <li><a target="_blank" href="https://github.com/binary-person/rammerhead">Rammerhead</a></li>
+            </ul>
+        </div>
+        <div class="footerlist">
+            <h3>Socials</h3>
+            <ul>
+                <li><a target="_blank" href="https://github.com/titaniumnetwork-dev/Holy-Unblocker">GitHub</a></li>
+                <li><a href="/terms.html">Instagram</a></li>
+                <div class="tooltip">
+                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                    <li><a onclick="copyDiscord();" onmouseout="outFunc();" class="discord-text">Discord</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <p class="copyright">Alu's Unblocker &copy; 2022</p>
+    </div>
+</body>
+</html>
