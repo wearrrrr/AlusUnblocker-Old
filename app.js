@@ -6,10 +6,9 @@ const logger = require('morgan');
 const http = require('http')
 
 
-const indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index')
 const settingsRouter = require('./routes/settings')
-const usersRouter = require('./routes/users');
-const proxiesRouter = require('./routes/proxies')
+const usersRouter = require('./routes/users')
 const bookmarkletsRouter = require('./routes/bookmarklets')
 const creditsRouter = require('./routes/credits.js')
 
@@ -43,9 +42,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', indexRouter)
 app.use('/settings', settingsRouter)
-app.use('/users', usersRouter);
 app.use('/proxies', proxiesRouter)
 app.use('/bookmarklets', bookmarkletsRouter)
 app.use('/credits', creditsRouter)
